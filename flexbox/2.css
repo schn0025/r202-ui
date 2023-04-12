@@ -51,6 +51,7 @@ body{
     padding: 0.2rem;
     border-radius: 5px;
     background-color: lightgray;
+    flex-grow: 1;
     flex-shrink:0 ;
 }
 
@@ -59,5 +60,5 @@ body{
     padding: 0.2rem;
     border-radius: 5px;
     background-color: lightgray;
-    flex-shrink: 1;
+    flex-grow: 1;
 }
