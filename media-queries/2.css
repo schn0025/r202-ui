@@ -13,14 +13,7 @@ body{
     align-content: space-around;
 }
 
-.menu{
-    display:flex;
-    flex-direction: row;
-}
-
-.menu__item{
-    flex-grow: 1;
-    align-content: space-around;
+header{
     margin: 0.2rem ;    
     padding: 0.2rem;
     border-radius: 5px;
@@ -33,6 +26,30 @@ body{
     flex-grow: 1;
 }
 
+.menu{
+    display:flex;
+    flex-direction: column;
+}
+
+.corps{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+.menu__item{
+    flex-grow: 1;
+    align-content: space-around;
+    margin: 0.2rem ;    
+    padding: 0.2rem;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+.main__complement{
+    display: flex;
+    flex-direction: column;
+}
+
 .main__content{
     margin: 0.2rem ;    
     padding: 0.2rem;
@@ -41,7 +58,7 @@ body{
     flex-grow: 1;
 }
 
-.main__complement{
+.secondaire{
     margin: 0.2rem ;    
     padding: 0.2rem;
     border-radius: 5px;
@@ -49,25 +66,37 @@ body{
     flex-grow: 1;
 }
 
-@media screen and (min-width:800px){
-    .main{
-        flex-direction: row;
-    }
+footer{
+    margin: 0.2rem ;    
+    padding: 0.2rem;
+    border-radius: 5px;
+    background-color: lightgray;
+}
 
-    .main__complement{
-        flex-grow: 0;
-        flex-basis: 0;
+@media screen and (min-width:400px){
+    .menu{
+        flex-direction: row;
     }
 }
 
+@media screen and (min-width:800px){
+    .corps{
+        flex-direction: row-reverse;
+    }
+
+}
+
 @media screen and (min-width:1000px){
-    body{
-        flex-direction: row;
-        max-width: 1000px;
-        margin: auto;
+    .main{
+        flex-direction: row-reverse;
     }
 
     .menu{
-        flex-direction: column;
+        display: block;
+    }
+    
+    body{
+        max-width: 1000px;
+        margin: auto;
     }
 }
